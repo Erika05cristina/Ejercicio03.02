@@ -6,7 +6,6 @@ package com.mycompany.ejercicio03_02;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -25,8 +24,6 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.TitledBorder;
 
 /**
  *
@@ -49,7 +46,7 @@ public class Ventana1 extends JFrame {
         this.crearPaneles();
         this.iniciarJTextFields();
         this.iniciarCombos();
-        iniciarJButtons();
+        this.iniciarJButtons();
         this.setContentPane(this.jPanelPrincipal.get(0));
         this.setVisible(true);
     }
@@ -71,12 +68,11 @@ public class Ventana1 extends JFrame {
         
         jPanelList = new ArrayList<>();
         for (int x = 0; x < 6; x++) {
-            this.jPanelList.add(new JPanel());
-            this.jPanelList.get(x).setBackground(Color.white);
-                   
+            this.jPanelList.add(new JPanel());      
         }      
         
         this.jPanelPrincipal.get(1).add(this.jPanelList.get(0));
+        
         this.jPanelList.get(0).setLayout(new GridLayout(6, 1));
         this.jPanelList.get(0).add(this.jPanelList.get(1));
         this.jPanelList.get(0).add(this.jPanelList.get(2));
@@ -97,7 +93,14 @@ public class Ventana1 extends JFrame {
         this.jLabelList.add(new JLabel(" Selecione una sede: "));
         this.jLabelList.add(new JLabel(" Tipo Documento: "));
         this.jLabelList.add(new JLabel(" Ingrese su identificación: "));
- 
+        
+        jLabelList.get(1).setOpaque(true);
+        jLabelList.get(1).setHorizontalAlignment(SwingConstants.LEFT);
+        jLabelList.get(2).setOpaque(true);
+        jLabelList.get(2).setHorizontalAlignment(SwingConstants.LEFT);
+        jLabelList.get(3).setOpaque(true);
+        jLabelList.get(3).setHorizontalAlignment(SwingConstants.LEFT);
+      
         this.jTextFieldList = new ArrayList<>();
         this.jTextFieldList.add(new JTextField(10));
 
