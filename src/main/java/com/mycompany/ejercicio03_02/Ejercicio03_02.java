@@ -13,5 +13,6 @@ public class Ejercicio03_02 {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        var ventana1 = new Ventana1(" Ventana 1 ");
     }
 }
