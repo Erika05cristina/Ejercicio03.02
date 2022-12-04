@@ -29,7 +29,7 @@ import javax.swing.border.MatteBorder;
  *
  * @author Kristina
  */
-public class Ventana1 extends JFrame {
+public class Inscribete extends JFrame {
 
     private List<JPanel> jPanelList;
     private List<JPanel> jPanelPrincipal;
@@ -38,7 +38,7 @@ public class Ventana1 extends JFrame {
     private List<JComboBox> jComboBoxList;
     private List<JButton> jButtonList;
 
-    public Ventana1(String title) throws HeadlessException {
+    public Inscribete(String title) throws HeadlessException {
         super(title);
         this.setSize(400, 260);
         this.setLocation(200, 100);
@@ -80,7 +80,7 @@ public class Ventana1 extends JFrame {
         this.jPanelList.get(0).add(this.jPanelList.get(4));
         this.jPanelList.get(0).add(this.jPanelList.get(5));
         
-        this.jPanelList.get(1).setBackground(Color.darkGray);
+        this.jPanelList.get(1).setBackground(new Color(32, 91, 218));
         this.jPanelList.get(1).setBorder(new BevelBorder(BevelBorder.RAISED));
     }
 
@@ -119,12 +119,12 @@ public class Ventana1 extends JFrame {
         listaSede[0] = "Cuenca";
         listaSede[1] = "Quito";
         listaSede[2] = "Guayaquil";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaSede)));
+        this.jComboBoxList.add(new JComboBox(listaSede));
 
         var listaTipoDoc = new String[2];
         listaTipoDoc[0] = "Cedula";
         listaTipoDoc[1] = "Pasaporte";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaTipoDoc)));
+        this.jComboBoxList.add(new JComboBox(listaTipoDoc));
         this.jComboBoxList.add(new JComboBox());
 
         this.jPanelList.get(2).add(this.jComboBoxList.get(0));

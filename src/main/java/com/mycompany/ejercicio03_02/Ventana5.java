@@ -69,7 +69,7 @@ public class Ventana5 extends JFrame {
             this.jPanelList.get(x).setBorder(new CompoundBorder(new EtchedBorder(), new LineBorder(Color.lightGray)));
         }
 
-        this.jPanelPrincipal.get(1).add(this.jPanelList.get(0), BorderLayout.WEST);
+        this.jPanelPrincipal.get(1).add(this.jPanelList.get(0), BorderLayout.WEST); //Se agrega al panel principal 1 el panel 0
         this.jPanelList.get(0).setLayout(new GridLayout(3, 1));
         this.jPanelList.get(0).add(this.jPanelList.get(1));
         this.jPanelList.get(0).add(this.jPanelList.get(2));
@@ -95,21 +95,22 @@ public class Ventana5 extends JFrame {
         listaSede[0] = "Cuenca";
         listaSede[1] = "Quito";
         listaSede[2] = "Guayaquil";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaSede)));
+        this.jComboBoxList.add(new JComboBox(listaSede));
 
         var listaCampus = new String[3];
         listaCampus[0] = "El Vecino";
         listaCampus[1] = "Quito Metropolitano";
         listaCampus[2] = "Guayas";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaCampus)));
+        this.jComboBoxList.add(new JComboBox(listaCampus));
         
-         var listaCarrera = new String[5];
+        var listaCarrera = new String[6];
         listaCarrera[0] = "Arquitectura";
         listaCarrera[1] = "Computacion";
         listaCarrera[2] = "Electricidad";
         listaCarrera[3] = "Odotologia";
         listaCarrera[4] = "Contabilidad";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaCarrera)));
+        listaCarrera[5] = "Electrónica";
+        this.jComboBoxList.add(new JComboBox(listaCarrera));
         
         var listaProyecto = new String[5];
         listaProyecto[0] = "Arquitectura-Rediseño";
@@ -117,14 +118,14 @@ public class Ventana5 extends JFrame {
         listaProyecto[2] = "Electricidad-Rediseño";
         listaProyecto[3] = "Odotologia-Rediseño";
         listaProyecto[4] = "Contabilidad-Rediseño";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaProyecto)));
+        this.jComboBoxList.add(new JComboBox(listaProyecto));
         
         var listaModalidad= new String[4];
         listaModalidad[0] = "Presencial";
         listaModalidad[1] = "Virtual";
         listaModalidad[2] = "Híbrida";
         listaModalidad[3] = "Distancia";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaModalidad)));
+        this.jComboBoxList.add(new JComboBox(listaModalidad));
         
         var listaPeriodo = new String[5];
         listaPeriodo[0] = "2022-2022";
@@ -132,10 +133,11 @@ public class Ventana5 extends JFrame {
         listaPeriodo[2] = "2021-2021";
         listaPeriodo[3] = "2020-2020";
         listaPeriodo[4] = "2019-2020";
-        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaPeriodo)));
+        this.jComboBoxList.add(new JComboBox(listaPeriodo));
         
         this.jComboBoxList.add(new JComboBox());
-
+        
+//Se agrega los textos y los compbobox a los paneles 
         this.jPanelList.get(1).add(this.jLabelList.get(0));
         this.jPanelList.get(1).add(this.jComboBoxList.get(0));
         this.jPanelList.get(1).add(this.jLabelList.get(1));
